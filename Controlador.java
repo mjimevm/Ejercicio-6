@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.Collections;
 public class Controlador {
+    // Catálogo de equipos
     private ArrayList<Equipo> catalogo;
 
+    // Agregar equipos al catálogo
     public Controlador() {
         catalogo = new ArrayList<>();
         catalogo.add(new Dron(1, "Dron-1", 200, "NewTech")); // 1
@@ -17,9 +19,11 @@ public class Controlador {
         catalogo.add(new Cosechadora(10, "Cosechadora-1", 500, "AgroMachinery")); // 10
 
     }
+    // Devuelve catalogo
     public ArrayList<Equipo> getCatalogo() {
         return catalogo;
     }
+    // Buscar equipo por ID
     public String buscarPorId(int id) {
         for (Equipo equipo : catalogo) {
             if (id == equipo.getId()) {
@@ -28,6 +32,7 @@ public class Controlador {
         }
         return "No se dispone con el equipo con el ID: " + id;
     }
+    // Buscar equipo por Nombre
     public String buscarPorNombre(String nombre) {
         for (Equipo equipo : catalogo) {
             if (nombre.equals(equipo.getNombre())) {
@@ -36,9 +41,11 @@ public class Controlador {
         }
         return "No se dispone con el equipo con el nombre: " + nombre;
     }
+    // Ordenar catálogo por consumo eléctrico
     public void ordenarPorConsumo() {
         Collections.sort(catalogo);
     }
+    // Método para comparar dos equipos por consumo eléctrico
     public int compararEquipos(Equipo e1, Equipo e2) {
         return e1.compareTo(e2);
     }

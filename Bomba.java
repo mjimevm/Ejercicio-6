@@ -1,8 +1,10 @@
 public class Bomba extends Equipo implements Registrable, Accionable {
+    
+    // Constructor
     public Bomba(int id, String nombre, double consumoElectrico, String fabricante) {
         super(id, nombre, consumoElectrico, fabricante);
     }
-
+    // Polimorfismo de los métodos de las interfaces
     @Override
     public String registrar() {
         return "Bomba " + nombre + " registrada";

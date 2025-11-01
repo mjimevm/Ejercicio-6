@@ -1,3 +1,7 @@
+// Ejerecicio 6: Polimorfismo vía interfaces
+// Programación Orientada a Objetos
+// 25092 - Jimena Vásquez
+
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -15,6 +19,7 @@ public class Main {
             System.out.print("Seleccione una opción: ");
             opcion = teclado.nextInt();
             switch (opcion) {
+                // Opción 1: Listar todos los equipos
                 case 1: 
                     System.out.println("\nLista de todos los equipos");
                         for (Equipo equipo : controlador.getCatalogo()) {
@@ -37,10 +42,12 @@ public class Main {
                     int id = teclado.nextInt();
                     System.out.println(controlador.buscarPorId(id));
                     break;
+                // Opción 3: Ordenar catálogo por consumo eléctrico
                 case 3: 
                     System.out.println("\nOrdenar catálogo por consumo eléctrico: ");
                     controlador.ordenarPorConsumo();
                     break;
+                // Opción 4: Salir
                 case 4: 
                     System.out.println("Saliendo del programa...");
                     break;
