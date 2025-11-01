@@ -23,6 +23,9 @@ public abstract class Equipo implements Comparable<Equipo> {
     public double getConsumoElectrico() {
         return consumoElectrico;
     }
+    public String getFabricante() {
+        return fabricante;
+    }
     // Polimorfismo del método toString
     @Override
     public String toString() {
